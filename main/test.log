@@ -1,0 +1,10 @@
+开始连接数据库
+连接数据库成功
+2.7.11
+开始连接数据库
+连接数据库失败：
+/opt/sybase/OCS-15_0/python/python26_64r/lib/sybpydb.so: undefined symbol: PyUnicodeUCS2_Decode
+2.6.6
+开始连接数据库
+连接数据库成功
+2.7.11

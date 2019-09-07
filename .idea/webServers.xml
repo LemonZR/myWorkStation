@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a856f29c-e064-4dad-91fc-26652832488a" name="47tongwb" url="http://127.0.0.1">
+        <fileTransfer host="127.0.0.1" port="4722" rootFolder="/tongweb/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions controlEncoding="utf8" dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="4722" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="ecc22546-2c75-4f36-a8da-df8da865436f" name="我的阿里" url="http://localhost">
+        <fileTransfer host="39.107.72.32" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="58c69c8c-ab7d-4667-ad09-4e262cc305eb" name="47web" url="http://127.0.0.1">
+        <fileTransfer host="127.0.0.1" port="4722" rootFolder="/echnweb/monitor/BusinessMonitor/monitorApi" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="4722" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="a4b9ea2f-6537-4a67-afb5-48b22d004685" name="阿刚的阿里" url="http://39.107.77.93">
+        <fileTransfer host="39.107.77.93" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="8ca2cce1-c09c-4e7b-bb2c-a0de894bfe2a" name="200echnweb" url="http://127.0.0.1">
+        <fileTransfer host="127.0.0.1" port="20022" rootFolder="/echnweb/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="20022" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="f6355f72-7543-446c-b0ff-f164667b763e" name="172" url="http://127.0.0.1">
+        <fileTransfer host="127.0.0.1" port="17222" rootFolder="/echnlog/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="17222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

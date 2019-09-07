@@ -1,0 +1,32 @@
+<<<===================目录说明===================>>>
+主程序：
+    main_feeQC
+    涉及脚本：
+        findDiffOrderId.py
+            差异查询工具函数。
+        feeCheck.py
+            服务费数据文件生成后，进行差异检查。该脚本可单独执行，进行文件比对，并从数据库中查询到差异订单。
+            使用时需加月份 ./feeCheck.py 201811
+使用说明：
+    可直接执行 ./main_feeQC.py
+    不加参数执行，默认查询和稽核T-2账期的商城（shop）服务费数据和支付网（gw）关服务费数据;如果使用参数，需使用两个参数——开始日期和结束日期，跨月日期只会查开始日期的月表:
+    /tongweb/zhangrui/ecora/main_feeQC.py 20181102 20181102
+生成物文件目录：
+    result/
+        gw/ 支付网关服表务费查询结果输出处,每次查询后追加记录,会有重复行。
+        shop/ 订单月表服务费查询结果输出处,每次查询后追加记录,会有重复行。
+        checkresult/ feeCheck运行后的稽核结果文件目录,
+            201811.xls 汇总文件,用于每月结算完成后，与提供的销售子系统的数据进行比对
+            201811.diff 差异文件, 记录差异订单等信息。
+            201811_ALIPAY_B_0.csv、201811_ALIPAY_B_1.csv等 各渠道的服务费数据的整理，与gw/和shop/中的文件内容一样，区别在于本目录下的文件没有重复行数据。
+        checkresult_his/  checkresult/的备份(历史),每次执行check操作,会将checkresult/中的文件先移动到这里。
+其他文件
+    feeCheck_no_diffqry  只稽核查询的结果 不查询差异订单，使用方法同feeCheck.py
+    qry_by_hand 手动指定参数查询.当更新过数据库数据后，可单独用这个脚本查询对应数据，减少执行时间。
+        参数：执行./qry_by_hand 即可看到需要的参数
+            shop_or_gw =sys.argv[1]   #shop  /  gw
+            pay_channel = sys.argv[2] #WXPAY,CMPAY.....
+            pay_method = sys.argv[3]  #M / B
+            order_type =sys.argv[4]   #0 / 1
+            star_date =sys.argv[5]    #20190102
+            end_date =sys.argv[6]     #20190102
